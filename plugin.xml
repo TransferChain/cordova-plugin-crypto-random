@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-crypto-random" version="1.0.0">
+    <name>Random</name>
+    <description>Native Random operations for Android and iOS.</description>
+    <license>MIT</license>
+    <js-module src="www/Random.js" name="Random">
+        <clobbers target="CryptoKit.Random" />
+    </js-module>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Random">
+                <param name="android-package" value="com.transferchain.random.Random" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/Random.java" target-dir="src/com/transferchain/random" />
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Random">
+                <param name="ios-package" value="Random" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/Random.swift" />
+        <framework src="Security.framework" />
+    </platform>
+</plugin>

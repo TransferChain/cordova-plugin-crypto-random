@@ -1,0 +1,14 @@
+{
+  "name": "cordova-plugin-crypto-random",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TransferChain native Random for Android and iOS",
+  "license": "MIT",
+  "cordova": {
+    "id": "cordova-plugin-crypto-random",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}
